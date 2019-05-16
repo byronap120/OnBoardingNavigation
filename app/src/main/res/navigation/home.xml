@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_recipients"
+    app:startDestination="@id/recipientsFragment">
+
+    <fragment
+        android:id="@+id/recipientsFragment"
+        android:name="com.example.xoomnavigation.home.RecipientsFragment"
+        android:label="fragment_recipients"
+        tools:layout="@layout/fragment_recipients" />
+</navigation>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">XoomNavigation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_title">Splash Screen</string>
+    <string name="login_button">Login</string>
+    <string name="signUp_button">Signup</string>
+    <string name="onboarding_title">Oboarding</string>
+    <string name="recipients_title">My Recipients</string>
+    <string name="login_xoom">Login With Xoom</string>
+    <string name="login_paypal">Login With PayPal</string>
+    <string name="name_login">Name</string>
+    <string name="password_login">Password</string>
+</resources>

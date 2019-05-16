@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    app:startDestination="@id/chooseLoginFragment">
+
+    <include app:graph="@navigation/home" />
+
+    <fragment
+        android:id="@+id/chooseLoginFragment"
+        android:name="com.example.xoomnavigation.login.ChooseLoginFragment"
+        android:label="fragment_choose_login"
+        tools:layout="@layout/fragment_choose_login">
+        <action
+            android:id="@+id/action_chooseLoginFragment_to_xoomLoginFragment"
+            app:destination="@id/xoomLoginFragment" />
+        <action
+            android:id="@+id/action_chooseLoginFragment_to_payPalLoginFragment"
+            app:destination="@id/payPalLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payPalLoginFragment"
+        android:name="com.example.xoomnavigation.login.PayPalLoginFragment"
+        android:label="fragment_pay_pal_login"
+        tools:layout="@layout/fragment_pay_pal_login">
+        <action
+            android:id="@+id/action_payPalLoginFragment_to_my_recipients"
+            app:destination="@id/my_recipients"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/xoomLoginFragment"
+        android:name="com.example.xoomnavigation.login.XoomLoginFragment"
+        android:label="fragment_xoom_login"
+        tools:layout="@layout/fragment_xoom_login">
+        <action
+            android:id="@+id/action_xoomLoginFragment_to_my_recipients"
+            app:destination="@id/my_recipients"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
