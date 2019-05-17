@@ -2,11 +2,15 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreferenceCompat
-        app:key="authenticatedUser"
+        app:key="authenticated_user"
         app:title="User is already authenticated" />
 
     <SwitchPreferenceCompat
-        app:key="showOnboarding"
-        app:title="User already see on boarding screen" />
+        app:key="login_with_xoom"
+        app:title="User login using xoom" />
+
+    <SwitchPreferenceCompat
+        app:key="login_with_paypal"
+        app:title="User login using PayPal" />
 
 </PreferenceScreen>

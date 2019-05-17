@@ -8,6 +8,7 @@
     <string name="signUp_button">Signup</string>
     <string name="onboarding_title">Oboarding</string>
     <string name="recipients_title">My Recipients</string>
+    <string name="activity_title">Activity Screen</string>
     <string name="login_xoom">Login With Xoom</string>
     <string name="login_paypal">Login With PayPal</string>
     <string name="name_login">Name</string>
@@ -16,4 +17,10 @@
     <string name="recipients_tab">recipients</string>
     <string name="activity_tab">activity</string>
     <string name="email_signup">Email</string>
+
+    // Shared preferences keys
+    <string name="authenticated_user">authenticated_user</string>
+    <string name="login_with_xoom">login_with_xoom</string>
+    <string name="login_with_paypal">login_with_paypal</string>
+
 </resources>
