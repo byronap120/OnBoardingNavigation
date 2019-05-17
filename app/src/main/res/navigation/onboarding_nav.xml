@@ -5,9 +5,7 @@
     android:id="@+id/onboarding"
     app:startDestination="@id/splashFragment">
 
-    <include app:graph="@navigation/home" />
-
-    <include app:graph="@navigation/login" />
+    <include app:graph="@navigation/login2" />
 
     <fragment
         android:id="@+id/splashFragment"
@@ -20,25 +18,25 @@
             app:popUpTo="@+id/splashFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_splashFragment_to_my_recipients"
-            app:destination="@id/my_recipients"
+            android:id="@+id/action_splashFragment_to_homeActivity3"
+            app:destination="@id/homeActivity"
+            app:launchSingleTop="true"
             app:popUpTo="@+id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_login22"
+            app:destination="@id/login2" />
     </fragment>
 
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="com.example.xoomnavigation.onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" >
-        <action
-            android:id="@+id/action_onboardingFragment_to_login"
-            app:destination="@id/login"
-            app:popUpToInclusive="false" />
-    </fragment>
-    <fragment
-        android:id="@+id/preferenceFragment"
-        android:name="com.example.xoomnavigation.PreferenceFragment"
-        android:label="PreferenceFragment" />
+        tools:layout="@layout/fragment_onboarding" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.xoomnavigation.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 
 </navigation>

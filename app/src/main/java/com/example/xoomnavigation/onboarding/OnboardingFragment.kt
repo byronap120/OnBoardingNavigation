@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.xoomnavigation.R
 
@@ -20,7 +21,20 @@ class OnboardingFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_onboarding, container, false)
 
         view.findViewById<Button>(R.id.onboarding_login_button).setOnClickListener {
-            findNavController().navigate(R.id.action_onboardingFragment_to_login)
+            //findNavController().navigate(R.id.action_onboardingFragment_to_login)
+
+            findNavController().navigate(
+                R.id.homeActivity,
+                null,
+                NavOptions.Builder()
+                    .setPopUpTo(
+                        R.id.splashFragment,
+                        true
+                    ).build()
+            )
+
+            requireActivity().finish()
+
         }
 
         view.findViewById<Button>(R.id.onboarding_signup_button).setOnClickListener {
