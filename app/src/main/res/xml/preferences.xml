@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="authenticatedUser"
+        app:title="User is already authenticated" />
+
+    <SwitchPreferenceCompat
+        app:key="showOnboarding"
+        app:title="User already see on boarding screen" />
+
+</PreferenceScreen>

@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_recipients"
-    app:startDestination="@id/recipientsFragment">
+    app:startDestination="@id/recipients">
 
     <fragment
-        android:id="@+id/recipientsFragment"
+        android:id="@+id/recipients"
         android:name="com.example.xoomnavigation.home.RecipientsFragment"
         android:label="fragment_recipients"
         tools:layout="@layout/fragment_recipients" />
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.example.xoomnavigation.PreferenceFragment"
+        android:label="PreferenceFragment" />
+    <fragment
+        android:id="@+id/activity"
+        android:name="com.example.xoomnavigation.home.ActivityFragment"
+        android:label="fragment_activity"
+        tools:layout="@layout/fragment_activity" />
 </navigation>

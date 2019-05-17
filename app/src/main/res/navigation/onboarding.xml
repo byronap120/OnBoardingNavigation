@@ -36,5 +36,9 @@
             app:destination="@id/login"
             app:popUpToInclusive="false" />
     </fragment>
+    <fragment
+        android:id="@+id/preferenceFragment"
+        android:name="com.example.xoomnavigation.PreferenceFragment"
+        android:label="PreferenceFragment" />
 
 </navigation>
