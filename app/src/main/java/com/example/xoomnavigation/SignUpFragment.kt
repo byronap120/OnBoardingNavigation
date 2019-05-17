@@ -1,4 +1,4 @@
-package com.example.xoomnavigation.login
+package com.example.xoomnavigation
 
 
 import android.os.Bundle
@@ -8,19 +8,18 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.xoomnavigation.R
 
-class PayPalLoginFragment : Fragment() {
+class SignUpFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_pay_pal_login, container, false)
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_sign_up, container, false)
 
-        view.findViewById<Button>(R.id.paypal_login_button).setOnClickListener {
-            findNavController().navigate(R.id.homeActivity2)
-            requireActivity().finish()
+        view.findViewById<Button>(R.id.signup_fragment_button).setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_login)
         }
 
         return view

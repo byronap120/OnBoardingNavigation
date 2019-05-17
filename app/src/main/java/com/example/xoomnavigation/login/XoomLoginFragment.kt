@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.ActivityNavigator
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.xoomnavigation.R
 
@@ -21,15 +19,8 @@ class XoomLoginFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_xoom_login, container, false)
 
         view.findViewById<Button>(R.id.paypal_login_button).setOnClickListener {
-            findNavController().navigate(
-                R.id.action_xoomLoginFragment_to_my_recipients,
-                null,
-                NavOptions.Builder()
-                    .setPopUpTo(
-                        R.id.onboardingFragment,
-                        true
-                    ).build()
-            )
+            findNavController().navigate(R.id.homeActivity2)
+            requireActivity().finish()
         }
 
         return view

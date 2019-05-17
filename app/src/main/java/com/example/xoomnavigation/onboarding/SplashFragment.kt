@@ -28,11 +28,11 @@ class SplashFragment : Fragment() {
         CoroutineScope(Dispatchers.IO).launch {
             delay(TimeUnit.SECONDS.toMillis(1))
             withContext(Dispatchers.Main) {
-//                findNavController().navigate(R.id.action_splashFragment_to_homeActivity3)
-//                requireActivity().finish()
+                findNavController().navigate(R.id.homeActivity)
+                requireActivity().finish()
 
 
-                findNavController().navigate(R.id.action_splashFragment_to_login22)
+                //findNavController().navigate(R.id.action_splashFragment_to_onboardingFragment)
 
             }
         }

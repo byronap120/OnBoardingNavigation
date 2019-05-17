@@ -5,7 +5,7 @@
     android:id="@+id/onboarding"
     app:startDestination="@id/splashFragment">
 
-    <include app:graph="@navigation/login2" />
+    <include app:graph="@navigation/signup_nav" />
 
     <fragment
         android:id="@+id/splashFragment"
@@ -13,30 +13,42 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_splashFragment_to_onboardingFragment"
-            app:destination="@id/onboardingFragment"
-            app:popUpTo="@+id/splashFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_splashFragment_to_homeActivity3"
+            android:id="@+id/action_splashFragment_to_homeActivity"
             app:destination="@id/homeActivity"
             app:launchSingleTop="true"
             app:popUpTo="@+id/splashFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_splashFragment_to_login22"
-            app:destination="@id/login2" />
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@+id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_login_nav"
+            app:destination="@id/login_nav" />
     </fragment>
 
-    <fragment
-        android:id="@+id/onboardingFragment"
-        android:name="com.example.xoomnavigation.onboarding.OnboardingFragment"
-        android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" />
     <activity
         android:id="@+id/homeActivity"
         android:name="com.example.xoomnavigation.home.HomeActivity"
         android:label="activity_home"
         tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.xoomnavigation.onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_signup_nav"
+            app:destination="@id/signup_nav"
+            app:popUpTo="@+id/onboardingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardingFragment_to_login_nav"
+            app:destination="@id/login_nav"
+            app:popUpTo="@+id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <include app:graph="@navigation/login_nav" />
 
 </navigation>
